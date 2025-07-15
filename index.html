@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zymvod - Nowoczesny streaming filmow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-background"></div>
+    
+    <nav class="glass-nav liquid-glass">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">zymvod</span>
+            </div>
+            <button id="login-btn" class="nav-button">Zaloguj sie</button>
+        </div>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Witaj w <span class="gradient-text">zymvod</span></h1>
+            <p class="hero-subtitle">Odkryj nieograniczony swiat filmow i seriali w najwyzszej jakosci</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Film mamy xd</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4K</span>
+                    <span class="stat-label">Ultra HD</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Dostepnosc</span>
+                </div>
+            </div>
+            <button id="hero-login-btn" class="cta-button">
+                <span>Rozpocznij ogladanie</span>
+                <div class="button-glow"></div>
+            </button>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <div class="feature-icon">🎬</div>
+                    <span>Najnowsze premiery</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <span>Blyskawiczne ladowanie</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <span>Wszystkie urzadzenia</span>
+                </div>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-card"></div>
+            <div class="floating-card"></div>
+            <div class="floating-card"></div>
+            <div class="floating-orb"></div>
+            <div class="floating-orb"></div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+        
+        document.getElementById('hero-login-btn').addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

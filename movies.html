@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zymvod - Biblioteka filmow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-background"></div>
+    
+    <nav class="glass-nav liquid-glass">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">zymvod</span>
+            </div>
+            <button id="logout-btn" class="nav-button">Wyloguj</button>
+        </div>
+    </nav>
+
+    <main class="movies-section">
+        <div class="movies-header">
+            <h1 class="movies-title">Biblioteka zymvod</h1>
+            <p class="movies-subtitle">Najlepsze filmy na swiecie || Chcesz aby twoj film tu byl? Napisz na dc ok_ej</p>
+            <div class="movies-filters">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+                <button class="filter-btn" data-filter="thriller">Thriller</button>
+                <button class="filter-btn" data-filter="action">Akcja</button>
+                <button class="filter-btn" data-filter="drama">Dramat</button>
+            </div>
+        </div>
+        
+        <div class="featured-movie liquid-glass" id="featured-movie">
+        </div>
+        
+        <div class="section-title">
+            <h2>Kontynuuj ogladanie</h2>
+        </div>
+        <div class="continue-watching-section" id="continue-watching">
+        </div>
+        
+        <div class="section-title">
+            <h2>Wszystkie filmy na zymvod</h2>
+        </div>
+        <div class="movies-grid" id="movies-grid">
+        </div>
+    </main>
+
+    <script src="movies.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zymvod - Logowanie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-background"></div>
+    
+    <nav class="glass-nav liquid-glass">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">zymvod</span>
+            </div>
+            <button id="back-home-btn" class="nav-button">Powrot</button>
+        </div>
+    </nav>
+
+    <main class="login-section">
+        <div class="login-container">
+            <div class="login-card liquid-glass">
+                <h2 class="login-title">Zaloguj sie</h2>
+				<center><h6>Aby uzyskac dostep napisz na dc ok_ej</h6></center><br>
+                <form id="login-form">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Login" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Haslo" required>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div id="error-message" class="error-message"></div>
+                    <button type="submit" class="login-button">
+                        <span>Zatwierdz i zaloguj</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('back-home-btn').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            
+            if (username === 'zym' && password === 'zym123!') {
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('username', username);
+                window.location.href = 'movies.html';
+            } else {
+                errorMessage.textContent = 'Dane logowania sa nieprawidlowe';
+                errorMessage.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>

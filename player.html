@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zymvod - Odtwarzacz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player-background"></div>
+    
+    <div class="player-container">
+        <div class="video-wrapper">
+            <video id="video-player" preload="metadata">
+                <source src="" type="video/mp4">
+                twoja przegladarka jest spierdolona i nie mozesz ogladac xd
+            </video>
+            
+            <div class="player-overlay" id="player-overlay">
+                <div class="player-controls" id="player-controls">
+                    <div class="controls-top">
+                        <button id="back-to-movies" class="control-btn back-btn liquid-glass">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                            Powrot do biblioteki
+                        </button>
+                        <div class="movie-info">
+                            <h3 id="current-movie-title"></h3>
+                        </div>
+                    </div>
+                    
+                    <div class="controls-center">
+                        <button id="rewind-btn" class="control-btn rewind-btn liquid-glass">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                            </svg>
+                            <span class="control-label">-10 s</span>
+                        </button>
+                        
+                        <button id="play-pause-btn" class="control-btn play-btn main-play-btn liquid-glass">
+                            <svg id="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <svg id="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                                <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+                            </svg>
+                        </button>
+                        
+                        <button id="forward-btn" class="control-btn forward-btn liquid-glass">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/>
+                            </svg>
+                            <span class="control-label">+10 s</span>
+                        </button>
+                    </div>
+                    
+                    <div class="controls-bottom">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progress-bar">
+                                <div class="progress-filled" id="progress-filled"></div>
+                                <div class="progress-handle" id="progress-handle"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="controls-row">
+                            <div class="time-display">
+                                <span id="current-time">0:00</span>
+                                <span>/</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            
+                            <div class="volume-control">
+                                <button id="mute-btn" class="control-btn liquid-glass">
+                                    <svg id="volume-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                    </svg>
+                                    <svg id="mute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <line x1="23" y1="9" x2="17" y2="15"/>
+                                        <line x1="17" y1="9" x2="23" y2="15"/>
+                                    </svg>
+                                </button>
+                                <div class="volume-slider">
+                                    <input type="range" id="volume-range" min="0" max="100" value="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="player.js"></script>
+</body>
+</html>
